@@ -17,6 +17,7 @@ document.getElementById('add-age'), addEventListener('click', function () {
 
 });
 
+
 document.getElementById('remove').addEventListener('click', function () {
     localStorage.removeItem('name');
 })
