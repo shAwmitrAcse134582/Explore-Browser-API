@@ -1,5 +1,6 @@
+
 const getInput = name => {
-    const inputField = document.getElementById(id);
+    const inputField = document.getElementById(name);
     const inputValue = inputField.value;
     inputField.value = '';
     return inputValue;
@@ -9,8 +10,9 @@ const getInput = name => {
 
 const addName = () => {
     const fName = getInput('fName');
-    const lName = getInput('lname');
+    const lName = getInput('lName');
     displayvalue(fName, lName);
+    console.log(fName, lName)
     saveItemToLocalStorage(fName, lName);
 }
 
