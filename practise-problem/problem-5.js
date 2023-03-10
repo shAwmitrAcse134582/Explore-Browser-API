@@ -1,6 +1,7 @@
 const operation = (a, b, c) => {
+
     if (c == add) {
-        return a + b;
+        return a - b;
     }
     else if (c == sub) {
         return a - b;
@@ -20,7 +21,7 @@ const operation = (a, b, c) => {
 }
 
 
-function add() {
+function add(a) {
 
 }
 
@@ -39,6 +40,6 @@ function mod() {
 }
 
 
-const res = operation(10, 5, div);
+const res = operation(10, 5, add);
 console.log(res);
 
