@@ -61,7 +61,7 @@ const showProductDetails = (product_id) => {
 const showProductDetailsInModal = (product_details) => {
    console.log(product_details);
    setInnerText('exampleModalLabel', product_details.title);
-   setInnerText('product_id', product_details.id);
+   setInnerText('productId', product_details.id);
    setInnerText('modal_body', product_details.description);
    setInnerText('rating', product_details.rating.rate);
 };
@@ -117,8 +117,8 @@ const updateTotal = () => {
 // search by category
 document.getElementById("search-btn").addEventListener("click", function () {
    const inputField = document.getElementById("input-value").value;
-   const searchedProduct = arr[0].find((p) =>
-      p.category.startsWith(`${inputField}`)
+   const searchedProduct = arr.filter(p =>
+      p.title.toLowerCase().includes(inputField.toLowerCase())
    );
    showProducts(searchedProduct);
 });
